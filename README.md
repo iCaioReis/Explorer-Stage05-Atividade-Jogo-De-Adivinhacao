@@ -1,0 +1,1 @@
+# Explorer-Stage05-Atividade-Jogo-De-Adivinhacao
