@@ -1,3 +1,11 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +15,7 @@
 :root{
     font-size: 62.5%;
 
+    --color-base-white: #ffffff;
     --color-base-button: #7879F1;
     --color-base-text: #34355B;
     --color-base-input: #DCE2E9;
@@ -22,6 +31,10 @@ body{
 body, button, input{
     font-family: 'DM Sans', sans-serif;
 }
+.hide{
+    display: none;
+}
+/*Screen 1*/
 main{
     border-radius: 0.6rem;
     background: #FFF;
@@ -54,19 +67,46 @@ form{
     display: flex;
     justify-content: center;
 }
-form input{
-    border-radius: 4px 0px 0px 4px;
+input, button{
     border: none;
+    padding: 1.6rem;
+}
+input{
+    border-radius: .4rem 0px 0px .4rem;
 
     background: var(--color-base-input);
 
-    padding: 1.6rem;
+    width: 6rem;
 }
-form button{
-    border-radius: 0px 4px 4px 0px;
-    border: none;
+button{
+    border-radius: 0px .4rem .4rem 0px;
 
     background: var(--color-base-button);
 
-    padding: 1.6rem;
+    color: var(--color-base-white);
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background .3s;
+}
+
+button:hover{
+    background-color: var(--color-base-text);
+}
+
+/*Screen2*/
+
+.screen2{
+    text-align: center;
+}
+
+h2{
+    font-size: 2.4rem;
+
+    margin-bottom: 3.2rem;
+}
+
+.screen2 button{
+    border-radius: .4rem;
 }
